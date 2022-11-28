@@ -4,8 +4,8 @@
     [
       "babel-plugin-rn-size",
       {
-        "whiteFiles": ["src/"],
-        "flatListWhiteFiles": ["src/"],
+        "includes": ["src/"],
+        "flatListIncludes": ["src/"],
         "defaultScreen": {
           "width": 375,
           "height": 667

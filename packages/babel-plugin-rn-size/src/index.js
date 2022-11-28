@@ -16,13 +16,13 @@ function plugin({ types, template }) {
     visitor: {
       Property: {
         exit: function (path, state) {
-          const { whiteFiles = [] } = state.opts || {};
+          const { includes = [] } = state.opts || {};
           // ignore. This is a filter to ignore some files.
           if (!types.isObjectExpression(path.parent)) {
             return;
           }
           // ignore. This is a filter to ignore some files.
-          if (whetherWhiteFile(whiteFiles, state.file.opts.filename)) {
+          if (whetherWhiteFile(includes, state.file.opts.filename)) {
             return;
           }
           var node = path.node;
@@ -46,8 +46,8 @@ function plugin({ types, template }) {
       },
       JSXOpeningElement: {
         enter: function (path, state) {
-          const { flatListWhiteFiles = [] } = state.opts || {};
-          if (whetherWhiteFile(flatListWhiteFiles, state.file.opts.filename)) {
+          const { flatListIncludes = [] } = state.opts || {};
+          if (whetherWhiteFile(flatListIncludes, state.file.opts.filename)) {
             return;
           }
           // let refAttribute = null;
