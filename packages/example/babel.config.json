@@ -1,0 +1,16 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    [
+      "babel-plugin-rn-size",
+      {
+        "whiteFiles": ["src/"],
+        "flatListWhiteFiles": ["src/"],
+        "defaultScreen": {
+          "width": 375,
+          "height": 667
+        }
+      }
+    ]
+  ]
+}

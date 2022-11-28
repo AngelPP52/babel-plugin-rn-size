@@ -1,0 +1,14 @@
+{
+  "name": "babel-plugin-rn-size",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "keywords": [
+    "babel",
+    "plugin",
+    "rn size"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "react-native": "0.63.3"
+  }
+}
